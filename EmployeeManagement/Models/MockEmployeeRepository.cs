@@ -7,7 +7,7 @@ namespace EmployeeManagement.Models
 {
     public class MockEmployeeRepository : IEmployeeRepository
     {
-        private  List<Employee> _employeeList;
+        private readonly List<Employee> _employeeList;
         public MockEmployeeRepository()
         {
             _employeeList = new List<Employee>()
@@ -16,6 +16,11 @@ namespace EmployeeManagement.Models
                 new Employee() { Id = 2, Name = "Carry", Department = "RH", Email = "cary@diwash.com" },
                 new Employee() { Id = 3, Name = "Larry", Department = "ER", Email = "lary@diwash.com" }
             };
+        }
+
+        public IEnumerable<Employee> GetAllEmployee()
+        {
+            return _employeeList;
         }
 
         public Employee GetEmployee(int Id)
