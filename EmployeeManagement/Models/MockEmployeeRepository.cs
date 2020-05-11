@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace EmployeeManagement.Models
 {
@@ -12,8 +10,8 @@ namespace EmployeeManagement.Models
         {
             _employeeList = new List<Employee>()
             {
-                new Employee() { Id = 1, Name = "Marry", Department = Dept.HR, Email = "mary@diwash.com" },
-                new Employee() { Id = 2, Name = "Carry", Department = Dept.IT, Email = "cary@diwash.com" },
+                new Employee() { Id = 1, Name = "Marry", Department = Dept.Hr, Email = "mary@diwash.com" },
+                new Employee() { Id = 2, Name = "Carry", Department = Dept.It, Email = "cary@diwash.com" },
                 new Employee() { Id = 3, Name = "Larry", Department = Dept.Management, Email = "lary@diwash.com" }
             };
         }
@@ -40,9 +38,9 @@ namespace EmployeeManagement.Models
             return _employeeList;
         }
 
-        public Employee GetEmployee(int Id)
+        public Employee GetEmployee(int id)
         {
-            return _employeeList.FirstOrDefault(e => e.Id == Id);
+            return _employeeList.FirstOrDefault(e => e.Id == id);
         }
 
         public Employee Update(Employee employeeChanges)

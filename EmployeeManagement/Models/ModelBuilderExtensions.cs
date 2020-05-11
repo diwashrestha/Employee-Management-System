@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EmployeeManagement.Models
 {
@@ -15,21 +11,21 @@ namespace EmployeeManagement.Models
                 {
                     Id = 1,
                     Name = "Mark1",
-                    Department = Dept.IT,
+                    Department = Dept.It,
                     Email = "mark@davetech.com"
                 },
                 new Employee
                 {
                     Id = 2,
                     Name = "Diwash",
-                    Department = Dept.IT,
+                    Department = Dept.It,
                     Email = "diwash@davetech.com"
                 },
                 new Employee
                 {
                     Id = 3,
                     Name = "Markintost",
-                    Department = Dept.IT,
+                    Department = Dept.It,
                     Email = "kintost@davetech.com"
                 }
                 );

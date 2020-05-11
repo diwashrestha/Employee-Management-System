@@ -1,31 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace EmployeeManagement.Models
 {
-    public class SQLEmployeeRepository : IEmployeeRepository
+    public class SqlEmployeeRepository : IEmployeeRepository
     {
-        private readonly AppDbContext context;
-        public SQLEmployeeRepository(AppDbContext context)
+        private readonly AppDbContext _context;
+        public SqlEmployeeRepository(AppDbContext context)
         {
-            this.context = context;
+            this._context = context;
         }
         public Employee Add(Employee employee)
         {
-            context.Employees.Add(employee);
-            context.SaveChanges();
+            _context.Employees.Add(employee);
+            _context.SaveChanges();
             return employee;
         }
 
         public Employee Delete(int id)
         {
-            Employee employee = context.Employees.Find(id);
+            Employee employee = _context.Employees.Find(id);
             if (employee != null)
             {
-                context.Employees.Remove(employee);
-                context.SaveChanges();
+                _context.Employees.Remove(employee);
+                _context.SaveChanges();
 
             }
             return employee;
@@ -33,19 +30,19 @@ namespace EmployeeManagement.Models
 
         public IEnumerable<Employee> GetAllEmployee()
         {
-            return context.Employees;
+            return _context.Employees;
         }
 
-        public Employee GetEmployee(int Id)
+        public Employee GetEmployee(int id)
         {
-            return context.Employees.Find(Id);
+            return _context.Employees.Find(id);
         }
 
         public Employee Update(Employee employeeChanges)
         {
-            var employee = context.Employees.Attach(employeeChanges);
+            var employee = _context.Employees.Attach(employeeChanges);
             employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            context.SaveChanges();
+            _context.SaveChanges();
             return employeeChanges;
         }
     }
