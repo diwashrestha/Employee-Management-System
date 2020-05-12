@@ -155,3 +155,4 @@ F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.E
 F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
 F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csproj.CoreCompileInputs.cache
 F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
