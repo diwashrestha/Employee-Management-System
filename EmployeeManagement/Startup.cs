@@ -1,6 +1,7 @@
 using EmployeeManagement.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,8 +24,11 @@ namespace EmployeeManagement
         {
             services.AddDbContextPool<AppDbContext>(
                 options => options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
             services.AddScoped<IEmployeeRepository, SqlEmployeeRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +47,7 @@ namespace EmployeeManagement
 
 
             app.UseStaticFiles();
+            app.UseAuthentication();
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
