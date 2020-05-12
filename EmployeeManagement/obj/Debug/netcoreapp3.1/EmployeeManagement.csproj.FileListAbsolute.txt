@@ -149,3 +149,9 @@ F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\
 F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\nlog.config
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.dll
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csproj.CoreCompileInputs.cache
+F:\PROJECTS\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.MvcApplicationPartsAssemblyInfo.cache
