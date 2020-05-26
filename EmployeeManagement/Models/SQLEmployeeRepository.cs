@@ -6,12 +6,12 @@ namespace EmployeeManagement.Models
     public class SqlEmployeeRepository : IEmployeeRepository
     {
         private readonly AppDbContext _context;
-        private readonly ILogger<SqlEmployeeRepository> logger;
+        private readonly ILogger<SqlEmployeeRepository> _logger;
         public SqlEmployeeRepository(AppDbContext context,
             ILogger<SqlEmployeeRepository> logger)
         {
             this._context = context;
-            this.logger = logger;
+            this._logger = logger;
         }
         public Employee Add(Employee employee)
         {
@@ -39,12 +39,12 @@ namespace EmployeeManagement.Models
 
         public Employee GetEmployee(int id)
         {
-            logger.LogTrace("Trace Log");
-            logger.LogDebug("Debug Log");
-            logger.LogInformation("Information Log");
-            logger.LogWarning("Warning Log");
-            logger.LogError("Error Log");
-            logger.LogCritical("Critical Log");
+            _logger.LogTrace("Trace Log");
+            _logger.LogDebug("Debug Log");
+            _logger.LogInformation("Information Log");
+            _logger.LogWarning("Warning Log");
+            _logger.LogError("Error Log");
+            _logger.LogCritical("Critical Log");
             return _context.Employees.Find(id);
         }
 
